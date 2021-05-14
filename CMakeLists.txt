@@ -146,7 +146,7 @@ else()
 	target_link_libraries(orbc LLVM)
 endif()
 
-target_link_libraries(orbc clangTooling)
+target_link_libraries(orbc clang-cpp)
 
 # install targets
 install(TARGETS orbc DESTINATION bin)

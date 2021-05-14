@@ -1291,7 +1291,7 @@ bool Compiler::initLlvmTargetMachine() {
     const std::string cpu = "generic";
     const std::string features = "";
     const llvm::TargetOptions options;
-    llvm::Optional<llvm::Reloc::Model> relocModel;
+    llvm::Optional<llvm::Reloc::Model> relocModel = llvm::Reloc::PIC_;
     targetMachine = target->createTargetMachine(targetTriple, cpu, features, options, relocModel);
     llvmModule->setDataLayout(targetMachine->createDataLayout());
 
